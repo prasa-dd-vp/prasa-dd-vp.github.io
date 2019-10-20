@@ -1,6 +1,6 @@
 (function($) {
   "use strict"; // Start of use strict
-
+  document.getElementById('main').style.backgroundColor = 'white';
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -12,6 +12,16 @@
         }, 1000, "easeInOutExpo");
         return false;
       }
+    }
+  });
+
+  //switch to dark and light theme
+  $('#profilepic').click(function(){
+    var bgcolor = document.getElementById('main').style.backgroundColor;
+    if (bgcolor === 'white'){
+      document.getElementById('main').style.backgroundColor = 'black';
+    } else{
+      document.getElementById('main').style.backgroundColor = 'white';
     }
   });
 
