@@ -16,12 +16,14 @@
   });
 
   //switch to dark and light theme
-  $('#profilepic').click(function(){
-    var bgcolor = document.getElementById('main').style.backgroundColor;
-    if (bgcolor === 'white'){
+  var switchToDarkMode = true;
+  $('#light-dark-switch').click(function(){
+    if (switchToDarkMode){
       document.getElementById('main').style.backgroundColor = 'black';
+      switchToDarkMode = false;
     } else{
       document.getElementById('main').style.backgroundColor = 'white';
+      switchToDarkMode = true;
     }
   });
 
